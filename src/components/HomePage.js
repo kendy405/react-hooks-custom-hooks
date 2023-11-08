@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import useDocumentTitle from "../hooks/useDocumentTitle";
+import useQuery from "../hooks/useQueryAdvanced";
 import About from "./About";
 import ArticleList from "./ArticleList";
 
@@ -21,6 +23,7 @@ function HomePage() {
   useEffect(() => {
     document.title = "Underreacted | Home";
   }, []);
+  useDocumentTitle("Underreacted | Home");
 
   return (
     <>
@@ -29,5 +32,4 @@ function HomePage() {
     </>
   );
 }
-
 export default HomePage;
